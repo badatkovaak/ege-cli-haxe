@@ -1,0 +1,6 @@
+-main Ege_cli
+
+--library mcli
+--library hxcpp
+
+--cpp bin/cpp
