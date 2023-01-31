@@ -1,4 +1,4 @@
-package;
+package src;
 
 class TreeIterator {
 	public var root:Node;

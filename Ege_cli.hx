@@ -1,18 +1,14 @@
 import Sys;
 import mcli.Dispatch;
-import TreeSolver as Ts;
-import Node as Nd;
-import Utils;
+import src.TreeSolver as Ts;
+import src.Node as Nd;
+import src.Utils;
 
 /**
 	This is a sample programm that solves ege problems. Enjoy!
+	Possible modes are : 19 , 20 , 21.
 **/
 class Ege_cli extends mcli.CommandLine {
-	/**
-		Possible values: 19, 20, 21.
-	**/
-	public var mode:Int;
-
 	/**
 		Should the tree be printed(Bool).
 	**/
@@ -29,23 +25,11 @@ class Ege_cli extends mcli.CommandLine {
 	public var start_value:Int = 0;
 
 	/**
-		for mode(19) - depth of a tree.
+		for mode 19 - depth of a tree.
 	**/
 	public var depth:Int = 0;
 
 	public function runDefault(mode:Int, maxVal:Int, operations:String) {
-		// if (mode == 0) {
-		// 	this.help();
-		// }
-		// if (maxVal == 0) {
-		// 	Sys.println('Enter Max Value');
-		// 	this.help();
-		// }
-		// if (operations == 0) {
-		// 	Sys.println('Enter operations');
-		// 	this.help();
-		// }
-
 		switch (mode) {
 			case 19:
 				solve19(maxVal, operations);
@@ -58,7 +42,7 @@ class Ege_cli extends mcli.CommandLine {
 
 	private function solve21(maxVal:Int, operations:String) {
 		var solutions:Array<Int> = [];
-		var tree:Node;
+		var tree:src.Node;
 		var local_depth:Int = depth;
 		var oper = Utils.trimAll(operations.split(','));
 		var values:Array<Int> = [];
@@ -88,7 +72,7 @@ class Ege_cli extends mcli.CommandLine {
 
 	private function solve20(maxVal:Int, operations:String) {
 		var solutions:Array<Int> = [];
-		var tree:Node;
+		var tree:src.Node;
 		var oper = Utils.trimAll(operations.split(','));
 		var values:Array<Int> = [];
 		var local_depth:Int = depth;
@@ -118,7 +102,7 @@ class Ege_cli extends mcli.CommandLine {
 
 	private function solve19(maxVal:Int, operations:String) {
 		var solutions:Array<Int> = [];
-		var tree:Node;
+		var tree:src.Node;
 		var oper = Utils.trimAll(operations.split(','));
 		var values:Array<Int> = [];
 		var local_depth:Int = depth;

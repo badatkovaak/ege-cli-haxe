@@ -1,6 +1,5 @@
-package;
+package src;
 
-import sys.io.File;
 import Math;
 
 class Node {

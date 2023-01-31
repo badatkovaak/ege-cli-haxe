@@ -1,4 +1,4 @@
-package;
+package src;
 
 class Utils {
 	static public function trim(item:String):String {
