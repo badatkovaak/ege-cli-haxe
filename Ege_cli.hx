@@ -5,17 +5,20 @@ import src.Node as Nd;
 import src.Utils;
 
 /**
-	This is a sample programm that solves ege problems. Enjoy!
+	This is a simple programm that solves ege problems. Enjoy!
 	Possible modes are : 19 , 20 , 21.
+	Usage: [mode] [max_val] [operations]
+	max_val - maximum start value.
+	operations - possible operations separated by comma. 
 **/
 class Ege_cli extends mcli.CommandLine {
 	/**
-		Should the tree be printed(Bool).
+		Should the tree be printed (Bool).
 	**/
 	public var verbose:Bool;
 
 	/**
-		Winnig value in the tree(only for 2 piles).
+		Winnig value in the tree (only for 2 piles).
 	**/
 	public var max_range:Int = 0;
 
